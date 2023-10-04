@@ -53,9 +53,9 @@ class _HomeState extends State<Home> {
                       );
                     },
                     child: Hero(
-                      tag: "img$index",
+                      tag: imagePath,
                       child: Image.asset(
-                        "assets/img${index + 1}.jpg",
+                        imagePath,
                         fit: BoxFit.cover,
                         width: 150,
                         height: 150,

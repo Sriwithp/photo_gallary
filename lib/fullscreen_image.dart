@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pinch_zoom/pinch_zoom.dart';
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
 
 class FullScreenImagePage extends StatelessWidget {
   final List<String> imagePaths;
   final int currentIndex;
 
-  const FullScreenImagePage({super.key, 
+  const FullScreenImagePage({
+    super.key,
     required this.imagePaths,
     required this.currentIndex,
   });
@@ -16,20 +18,20 @@ class FullScreenImagePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Image Viewer'),
       ),
-      body: PageView.builder(
+      body: PhotoViewGallery.builder(
         itemCount: imagePaths.length,
-        controller: PageController(initialPage: currentIndex),
-        itemBuilder: (context, index) {
-          final imagePath = imagePaths[index];
-          return PinchZoom(
-            resetDuration: const Duration(milliseconds: 100),
-            maxScale: 2.5,
-            child: Image.asset(
-              imagePath,
-              fit: BoxFit.contain,
-            ),
+        builder: (context, index) {
+          return PhotoViewGalleryPageOptions(
+            imageProvider: AssetImage(imagePaths[index]),
+            minScale: PhotoViewComputedScale.contained,
+            maxScale: PhotoViewComputedScale.covered * 2,
           );
         },
+        scrollPhysics: const BouncingScrollPhysics(),
+        backgroundDecoration: const BoxDecoration(
+          color: Colors.black,
+        ),
+        pageController: PageController(initialPage: currentIndex),
       ),
     );
   }

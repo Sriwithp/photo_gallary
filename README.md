@@ -1,16 +1,16 @@
 # image_gallary_app
 
-A new Flutter project.
+A new Flutter project assignment.
 
 ## Getting Started
+Assigment Description 
+Image Gallery App:
+Develop an app that displays a grid of images fetched from an API or stored locally.
+Allow users to view individual images in full-screen mode with pinch-to-zoom functionality.
+Use any library for image loading and swiping between images.
 
-This project is a starting point for a Flutter application.
+Video Demo:
 
-A few resources to get you started if this is your first Flutter project:
+https://github.com/Sriwithp/photo_gallary/assets/66247499/d954eeec-69fd-4bda-99cc-75cbff153249
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

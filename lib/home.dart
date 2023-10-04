@@ -52,14 +52,11 @@ class _HomeState extends State<Home> {
                         ),
                       );
                     },
-                    child: Hero(
-                      tag: imagePath,
-                      child: Image.asset(
-                        imagePath,
-                        fit: BoxFit.cover,
-                        width: 150,
-                        height: 150,
-                      ),
+                    child: Image.asset(
+                      imagePath,
+                      fit: BoxFit.cover,
+                      width: 150,
+                      height: 150,
                     ),
                   );
                 })));
